@@ -1,0 +1,22 @@
+.form-widget{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.inputsWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.loginBtn{
+    background-color: #63458a;
+    width: 15rem;
+    border-radius: 50px;
+}
+
+.loginBtn:hover{
+    background-color: #715299;
+    border-color:#63458a;
+}

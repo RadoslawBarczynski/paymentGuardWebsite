@@ -1,0 +1,46 @@
+.navbar{
+    width: 100%;
+    background-color: black;
+    height: 5rem;
+    display: flex;
+    padding: 1px;
+    position: fixed;
+    top:0
+}
+
+.navbar-elements{
+    display: flex;
+}
+
+.navbar-nav{
+    display: flex;
+    gap: 40px;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-nav li{
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.navbar-nav li a{
+    color: #fff;
+}
+
+.logoWrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstTitle{
+    color: #9A48D0;
+}
+
+.iconTitle{
+    color: #9A48D0;
+}

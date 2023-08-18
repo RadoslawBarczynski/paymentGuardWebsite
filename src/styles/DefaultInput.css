@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputField{
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    border: 1px solid #D7D7D7;
+    border-radius: 50px;
+    height: 2.4rem;
+    width: 20rem;
+    padding-left: 10px;
+    font-size: 1rem;
+}

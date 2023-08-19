@@ -1,0 +1,40 @@
+.tile-body{
+    background-color: #53599A;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 15px;
+    position: relative;
+}
+
+.tile-body-container{
+    padding: 15px;
+}
+
+.basic-tile-wrapper{
+    position: absolute;
+    bottom: 2rem;
+    width: 16rem;
+}
+
+.basic-tile-div-span{
+    text-align: left;
+}
+
+.basic-tile-span{
+    font-size: 1.2rem;
+}
+
+.basic-tile-h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.basic-tile-div-span-second{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.basic-tile-span-second{
+    font-size: 1.2rem;
+}

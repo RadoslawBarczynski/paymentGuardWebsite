@@ -1,0 +1,64 @@
+.tile-advanced-body{
+    background-color: #182825;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 15px;
+    position: relative;
+}
+
+.tile-body-container{
+    padding: 15px;
+}
+
+.advanced-tile-wrapper{
+    position: absolute;
+    bottom: 2rem;
+    width: 16rem;
+    border-top: 1px solid white;
+}
+
+.advanced-tile-container-second {
+    padding-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+  
+.advanced-tile-content {
+    display: flex;
+    flex-direction: column;
+}
+  
+.advanced-tile-top {
+    align-self: flex-start;
+}
+  
+.advanced-tile-bottom-left {
+    align-self: flex-start;
+}
+
+.advanced-tile-bottom-right {
+    align-self: flex-end;
+}
+
+.advanced-tile-div-span{
+    text-align: left;
+}
+
+.advanced-tile-span{
+    font-size: 1.2rem;
+}
+
+.advanced-tile-h1{
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+
+.advanced-tile-div-span-second{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.advanced-tile-span-second{
+    font-size: 1.2rem;
+}

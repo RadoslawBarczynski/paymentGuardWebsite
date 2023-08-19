@@ -18,13 +18,13 @@ class Navbar extends Component{
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">Wszystkie wpisy</a>
+                  </li>
+                  <li class="nav-item-add">
+                    <a class="nav-link" href="#">Dodaj wpis</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
+                    <a class="nav-link disabled" href="#">Konto</a>
                   </li>
                 </ul>
             </div>

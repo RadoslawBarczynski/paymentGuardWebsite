@@ -1,0 +1,48 @@
+.huge-tile-body{
+    width: 40rem;
+    height: 13rem;
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+}
+
+.huge-tile-flexbox{
+    flex: 1;
+    padding: 0.5rem;
+}
+
+.huge-tile-type-sums{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 1rem;
+}
+
+.huge-tile-wrapper{
+    position: absolute;
+    bottom: 2rem;
+    width: 16rem;
+}
+
+.huge-tile-div-span{
+    text-align: left;
+}
+
+.huge-tile-span{
+    font-size: 1.2rem;
+}
+
+.huge-tile-h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.huge-tile-div-span-second{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.huge-tile-span-second{
+    font-size: 1.2rem;
+}

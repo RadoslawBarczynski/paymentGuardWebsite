@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 import '../styles//Home.css'
 import MainPanel from '../components/MainPanel'
 
-export default function Home({ setCurrentScreen, username, session  }) {
+export default function Home({ setCurrentScreen, username, session, changeView  }) {
     
   const [recordsSum, setRecordsSum] = useState(0);          //dzisiaj
   const [recordsOfMonth, setRecordsOfMonth] = useState([]); //w miesiącu
@@ -12,12 +12,14 @@ export default function Home({ setCurrentScreen, username, session  }) {
   const [price, setPrice] = useState(null);                 //cena ostatniego
   const [description, setDescription] = useState(null);     //opis ostatniego
   const [isScreenVisible, setIsScreenVisible] = useState(false);
+  const [inRegularRecordsOfMonth, setInRegularRecordsOfMonth] = useState([]); //niereguralne w tym miesiącu
+
 
   useEffect(() => {
     fetchRecordsSum();
     fetchRecordsOfMonth();
     fetchLastRecordToday();
-    setIsScreenVisible(true);
+    fetchInRegularRecordsOfMonth();
   }, []);
 
   const fetchRecordsSum = async () => {
@@ -88,8 +90,8 @@ export default function Home({ setCurrentScreen, username, session  }) {
       } else {
         if (data.length > 0) {
           setLastRecord(data[0]);
-          setPrice(data[0].price); // Rozbijamy wartoĹ›Ä‡ ceny na osobnÄ… zmiennÄ…
-          setDescription(data[0].description); // Rozbijamy wartoĹ›Ä‡ opisu na osobnÄ… zmiennÄ…
+          setPrice(data[0].price); 
+          setDescription(data[0].description); 
         } else {
           setLastRecord(null);
           setPrice(0);
@@ -101,15 +103,39 @@ export default function Home({ setCurrentScreen, username, session  }) {
     }
   };
 
+  const fetchInRegularRecordsOfMonth = async () => {
+    try {
+        const today = new Date();
+        const firstDayOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+        const lastDayOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+        lastDayOfMonth.setHours(23, 59, 59, 999);
+
+        const { data, error } = await supabase
+            .from('inregularcosts')
+            .select('price, timestamp, type')
+            .gte('timestamp', firstDayOfMonth.toISOString())
+            .lte('timestamp', lastDayOfMonth.toISOString());
+
+        if (error) {
+            console.error('Błąd podczas pobierania rekordów z tabeli inregularcosts:', error);
+        } else {
+            setInRegularRecordsOfMonth(data);
+        }
+    } catch (error) {
+        console.error('Błąd podczas pobierania rekordów z tabeli inregularcosts:', error.message);
+    }
+};
+
     return (
         <div className='body'>
-            <Navbar />
+            <Navbar changeView={changeView} currentScene={'home'}/>
             <MainPanel 
                 recordsSum={recordsSum}
                 recordsOfMonth={recordsOfMonth}
                 lastRecord={lastRecord}
                 price={price}
                 description={description}
+                inRegularRecordsOfMonth={inRegularRecordsOfMonth}
             />
         </div>
     )

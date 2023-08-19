@@ -1,0 +1,28 @@
+.add-body{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #1a1a1a;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 3rem;
+    padding: 2rem;
+    box-shadow: 7px 7px 5px rgba(5, 5, 5, 0.5);
+}
+
+.add-title{
+    font-size: 2rem;
+    color:#715299;
+    font-weight: bold;
+}
+
+.add-login-btn{
+    background-color: #63458a;
+    width: 15rem;
+    border-radius: 50px;
+}
+
+.add-login-btn:hover{
+    background-color: #715299;
+    border-color:#63458a;
+}

@@ -2,12 +2,12 @@
     position: relative; /* Ustawiamy pozycję jako relative, aby umożliwić pozycjonowanie elementu potomnego */
     width: 98%;
     height: 40rem;
-    background-color: #57c5bb;
+    background-color: #1a1a1a;
     margin: 15px;
     margin-top: 2rem;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
   }
   
   .panel-shape {
@@ -16,9 +16,9 @@
     right: 0; /* Odsuwamy element o 200px w prawo */
     width: 20rem;
     height: 4rem;
-    background-color: #57c5bb;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    background-color: #1a1a1a;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
   }
 
   .panel-shape::before {
@@ -40,7 +40,7 @@
     left: -23px;
     width: 23px;
     height: 4rem;
-    background-color: #57c5bb;
+    background-color: #1a1a1a;
     border-radius: 15px 0 0 0;
   }
 
@@ -48,6 +48,14 @@
     margin-top: 12px;
     width: 10rem;
     border-radius: 50px;
+    border: 1px solid #CF6679;
+    transition: 0.5s;
+    box-shadow: 7px 7px 5px rgba(5, 5, 5, 0.5);
+  }
+
+  .logout-btn:hover{
+    background-color: #CF6679;
+    border-color: #CF6679;
   }
 
   .tile-container-title{
@@ -60,12 +68,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 3rem;
   }
 
   .small-tiles-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 4rem;
   }
   

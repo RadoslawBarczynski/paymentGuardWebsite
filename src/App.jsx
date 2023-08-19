@@ -4,17 +4,20 @@ import { supabase } from './database/supabaseClient'
 import Auth from './database/Auth'
 import Account from './database/Account'
 import Home from './pages/home'
+import Add from './pages/add'
+import History from './pages/history'
 
-//#9A48D0 - purple
-//#63458a - purple2
-//#ed9818 - yellow
-//#FE724C - red
-//#212121 - black
-//#D7D7D7 - grey
-
+//#63458a - purple
+//#BB86FC - purple2
+//#3700B3 - blue
+//#CF6679 - red
+//#03DAC6 - cyan
+//#242424 - background
+//#1a1a1a - secondary background
 
 function App() {
   const [session, setSession] = useState(null)
+  const [currentView, setCurrentView] = useState('home') // Początkowy widok to 'home'
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -26,11 +29,26 @@ function App() {
     })
   }, [])
 
+  const changeView = (view) => {
+    setCurrentView(view);
+  };
+
   return (
     <div className="container" style={{ padding: '50px 0 100px 0' }}>
-      {!session ? <Auth /> : <Home key={session.user.id} session={session} />}
+      {!session ? (
+        <Auth changeView={changeView} />
+      ) : currentView === 'home' ? (
+        <Home key={session.user.id} session={session} changeView={changeView} />
+      ) : currentView === 'account' ? (
+        <Account session={session} changeView={changeView} />
+      ) : currentView === 'history' ? (
+        <History session={session} changeView={changeView}/> 
+      ) : currentView === 'add' ? (
+        <Add session={session} changeView={changeView}/>
+      )
+      : null}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

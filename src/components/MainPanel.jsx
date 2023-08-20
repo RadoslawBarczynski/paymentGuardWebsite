@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import '../styles//MainPanel.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShield } from '@fortawesome/free-solid-svg-icons'
+import { supabase } from '../database/supabaseClient'
 import BasicTile from './BasicTile';
 import AdvancedTile from './AdvancedTile';
 import HugeTile from './HugeTile';

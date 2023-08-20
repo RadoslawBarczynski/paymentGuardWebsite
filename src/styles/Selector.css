@@ -1,0 +1,9 @@
+.add-toggle-regular-btn{
+    border: 1px solid #63458a
+}
+
+.add-toggle-regular-btn:hover{
+    border: 1px solid #63458a;
+    background-color: #63458a;
+    transition: 0.5s;
+}

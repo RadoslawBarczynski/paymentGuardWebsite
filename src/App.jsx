@@ -17,7 +17,7 @@ import History from './pages/history'
 
 function App() {
   const [session, setSession] = useState(null)
-  const [currentView, setCurrentView] = useState('home') // Początkowy widok to 'home'
+  const [currentView, setCurrentView] = useState('auth') // Początkowy widok to 'home'
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -26,6 +26,7 @@ function App() {
 
     supabase.auth.onAuthStateChange((_event, session) => {
       setSession(session)
+      changeView('home')
     })
   }, [])
 
@@ -36,6 +37,8 @@ function App() {
   return (
     <div className="container" style={{ padding: '50px 0 100px 0' }}>
       {!session ? (
+        <Auth changeView={changeView} />
+      ) : currentView === 'auth' ? (
         <Auth changeView={changeView} />
       ) : currentView === 'home' ? (
         <Home key={session.user.id} session={session} changeView={changeView} />

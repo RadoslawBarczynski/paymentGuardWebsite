@@ -1,0 +1,48 @@
+.history-tile-body{
+    /*background-color: #53599A;*/
+    width: 26rem;
+    height: 11rem;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 7px 7px 5px rgba(5, 5, 5, 0.5);
+}
+
+.history-tile-body-container{
+    padding: 10px;
+    display: flex;
+    gap: 1rem;
+}
+
+.history-tile-wrapper{
+    position: absolute;
+    right: 1rem;
+    height: 90%;
+    border-left: 1px solid #fff;
+    padding-left: 1rem;
+}
+
+.history-tile-div-span{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.history-tile-span{
+    font-size: 1rem;
+}
+
+.history-tile-h1{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.history-tile-div-span-second{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    gap: 2rem;
+}
+
+.history-tile-span-second{
+    font-size: 1.2rem;
+}

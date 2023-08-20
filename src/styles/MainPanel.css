@@ -9,6 +9,17 @@
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
   }
+
+  @media screen and (min-width: 1700px) {
+    .panel-body {
+      position: relative; /* Ustawiamy pozycję jako relative, aby umożliwić pozycjonowanie elementu potomnego */
+      width: 98%;
+      height: 50rem;
+      background-color: #1a1a1a;
+      margin: 15px;
+      margin-top: 2rem;
+    }
+  }
   
   .panel-shape {
     position: absolute; /* Ustawiamy pozycję jako absolute, aby można było precyzyjnie pozycjonować */

@@ -33,6 +33,12 @@
     color: #fff;
 }
 
+.nav-link:hover{
+    color: #9A48D0 !important;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
 .active a{
     color: #9A48D0;
     font-weight: bold;

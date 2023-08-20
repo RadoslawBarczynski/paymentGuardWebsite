@@ -14,7 +14,7 @@ const Selector = ({isNonRegular, changeIsNonRegular}) => {
       <div>
         <span style={{fontSize: '1.2rem', fontWeight: 'bold'}}>Nieregularny koszt</span>
       </div>
-    <button onClick={toggle}>
+    <button className='add-toggle-regular-btn' onClick={toggle}>
       {isActive ? 'Tak' : 'Nie'}
     </button>
     </div>
